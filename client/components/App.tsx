@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       <header className="header">
-        <h1>todos</h1>
+        <h1>My To Do List!</h1>
         <AddTodo />
       </header>
       <section className="main"></section>
