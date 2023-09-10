@@ -6,7 +6,7 @@ import taskRoutes from './routes/tasks.ts'
 const server = express()
 
 server.use(express.json())
-server.use('/api/v1/zombies', taskRoutes)
+server.use('/api/v1/tasks', taskRoutes)
 
 if (process.env.NODE_ENV === 'production') {
   server.use(express.static(Path.resolve('public')))

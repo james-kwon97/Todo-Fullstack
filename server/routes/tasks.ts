@@ -24,7 +24,7 @@ router.post('/', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   const deleteId = Number(req.params.id)
   console.log(deleteId)
-  const deleteTask = await db.deleteById(deleteId)
+  const deleteTask = await db.deleteTaskById(deleteId)
   res.json(deleteTask)
 })
 

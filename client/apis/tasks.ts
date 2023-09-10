@@ -3,13 +3,13 @@ import { Task } from '../../models/tasks'
 
 const rootUrl = '/api/v1/tasks'
 
-export function getTasks(): Promise<Task[]> {
+export function getAllTasks(): Promise<Task[]> {
   return request.get(rootUrl).then((res) => {
     return res.body
   })
 }
 
-export function addTask(task: Task): Promise<Task[]> {
+export function addNewTask(task: Task): Promise<Task[]> {
   return request
     .post(rootUrl)
     .send(task)
@@ -18,7 +18,7 @@ export function addTask(task: Task): Promise<Task[]> {
     })
 }
 
-export function deleteTask(id: number): Promise<Task[]> {
+export function deleteTaskById(id: number): Promise<Task[]> {
   return request.delete(`${rootUrl}/${id}`).then((res) => {
     return res.body
   })

@@ -11,6 +11,6 @@ export async function addNewTask(newTask: Task): Promise<Task[]> {
     .returning('*')
 }
 
-export async function deleteById(id: number) {
+export async function deleteTaskById(id: number) {
   return connection('tasks').delete().where({ id })
 }

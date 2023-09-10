@@ -7,12 +7,12 @@ export async function seed(knex) {
     {
       id: 1,
       description: 'Take out the trash',
-      complete: true,
+      // complete: true,
     },
     {
       id: 2,
       description: 'Do the dishes',
-      complete: false,
+      // complete: false,
     },
   ])
 }
