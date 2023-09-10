@@ -27,18 +27,20 @@ function AddNewTask() {
 
   return (
     <>
-      <h2>Add a new task</h2>
+      <div className="addTask-title">
+        <h2>Add a new task!</h2>
+      </div>
 
       <form onSubmit={handleSubmit} className="addTaskForm">
         <div>
-          <label htmlFor="description">Description:</label>
-          <br />
+          {/* <label htmlFor="description">Description:</label> */}
+
           <input
             id="description"
             onChange={handleChange}
             value={form.description}
             name="description"
-            placeholder="Add task here.."
+            placeholder="Add a task.."
           />
         </div>
         {/* <div>
@@ -51,7 +53,8 @@ function AddNewTask() {
             name="completed"
           />
         </div> */}
-        <button onClick={handleAddTask}>Add task</button>
+        <br />
+        <button>Add task</button>
       </form>
     </>
   )

@@ -16,7 +16,7 @@ function Nav() {
 
   return (
     <>
-      <div>
+      <div className="centered-container">
         <IfAuthenticated>
           <button className="logBtn" onClick={handleSignOut}>
             Sign out

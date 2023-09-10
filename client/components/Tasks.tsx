@@ -1,6 +1,5 @@
 import AddNewTask from './AddTask.tsx'
 import { useTasks } from '../hooks/useTasks.ts'
-// import '../styles/tooltip.css'
 
 function Tasks() {
   const hook = useTasks()
@@ -24,31 +23,29 @@ function Tasks() {
 
   return (
     <>
-      <div className="list-img-container">
-        <div>
-          <AddNewTask />
-        </div>
-        <ol className="task-list">
-          {tasks.map((task) => {
-            return (
-              <li key={task.id}>
-                <div className="tooltip-trigger">
-                  <p>
-                    {task.description}
-                    {/* {task.completed ? 'completed' : 'not completed'} */}
-                  </p>
-                </div>
-                <button
-                  onClick={() => {
-                    onDeleteClicked(task.id)
-                  }}
-                >
-                  Delete task
-                </button>
-              </li>
-            )
-          })}
-        </ol>
+      <ol className="task-list">
+        {tasks.map((task) => {
+          return (
+            <li key={task.id}>
+              <div>
+                <p>
+                  {task.description}
+                  {/* {task.completed ? 'completed' : 'not completed'} */}
+                </p>
+              </div>
+              <button
+                onClick={() => {
+                  onDeleteClicked(task.id)
+                }}
+              >
+                Delete task
+              </button>
+            </li>
+          )
+        })}
+      </ol>
+      <div>
+        <AddNewTask />
       </div>
     </>
   )

@@ -6,7 +6,7 @@ export async function getAllTasks(db = connection): Promise<Task[]> {
 }
 
 export async function addNewTask(newTask: Task): Promise<Task[]> {
-  return connection('task')
+  return connection('tasks')
     .insert({ ...newTask })
     .returning('*')
 }
