@@ -33,7 +33,7 @@ function AddNewTask() {
 
       <form onSubmit={handleSubmit} className="addTaskForm">
         <div>
-          {/* <label htmlFor="description">Description:</label> */}
+          <label htmlFor="description">New task: </label>
 
           <input
             id="description"
